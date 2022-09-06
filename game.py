@@ -8,6 +8,11 @@ class Game:
 
     def start_game(self):
         self.display_welcome()
+        self.player_setup(self.player_one)
 
     def display_welcome(self):
         print('\nWelcome to Battleship!')
+
+    def player_setup(self, player):
+        player.set_name()
+        player.display_fleet()
