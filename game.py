@@ -9,6 +9,7 @@ class Game:
     def start_game(self):
         self.display_welcome()
         self.player_setup(self.player_one)
+        self.player_setup(self.player_two)
 
     def display_welcome(self):
         print('\nWelcome to Battleship!')
