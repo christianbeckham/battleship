@@ -5,9 +5,9 @@ class Board:
         self.grid = None
         self.rows = None
         self.columns = None
-        self.create()
+        self.create_board()
 
-    def create(self):
+    def create_board(self):
         self.create_grid()
         self.create_list_of_row_names()
         self.create_list_of_column_names()
@@ -30,11 +30,14 @@ class Board:
             placeholder += f'[{number}]'
         return placeholder
 
-    def update(self):
-        pass
+    def update(self, cell, value):
+        for row in self.grid:
+            for item in row:
+                if item['name'] == cell:
+                    item['label'] = value
 
     def create_grid(self):
-        '''Method assigns the self.grid instance variable of the class to a multi-dimensional list of dictionaries for each cell.
+        '''Set the grid instance variable of the class to a multi-dimensional list of dictionaries for each cell.
 
         Each dictionary contains the name of the cell, the index position, and a label used to display in the console.
 
