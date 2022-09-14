@@ -10,13 +10,8 @@ class Player:
         self.target_board = Board()
 
     def set_name(self):
-        user_input = input(f'\nEnter the name for {self.name}: ')
+        user_input = input(f'Enter the name for {self.name}: ')
         self.name = user_input
-
-    def display_fleet(self):
-        print(f'\nFleet:')
-        for ship in self.fleet.ships:
-            print(f'  {ship.name} -- Position: {ship.coordinates} | Hits: ({ship.hits}/{ship.size}) | Sunk: {ship.is_sunk}')
 
     def set_ships(self):
         pass
